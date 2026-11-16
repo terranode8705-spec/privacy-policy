@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>여행뷰 개인정보처리방침</title>
+<style>
+  body { margin: 0 auto; max-width: 720px; padding: 24px 16px 48px; background: #fff; color: #222; font: 16px/1.7 -apple-system, "Malgun Gothic", "Noto Sans KR", sans-serif; word-break: keep-all; }
+  h1 { font-size: 26px; line-height: 1.35; margin: 0 0 8px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { border: 1px solid #ccc; padding: 8px; text-align: left; vertical-align: top; }
+  th { background: #f4f4f4; }
+  ul { padding-left: 20px; }
+  .date { color: #666; }
+  .en { margin-top: 40px; padding-top: 16px; border-top: 1px solid #ddd; color: #444; font-size: 15px; }
+</style>
+</head>
+<body>
+<h1>여행뷰 개인정보처리방침</h1>
+<p class="date">시행일: 2026년 11월 16일</p>
+<p>여행뷰 앱(외국어 이름 TravelView, 이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱에는 가입·로그인이 없고, 이름·전화번호·이메일을 묻지 않습니다. 개발자는 이용자 개인을 알아볼 수 있는 정보를 서버에 저장하지 않습니다.</p>
+
+<h2>1. 휴대폰 안에만 저장되는 정보</h2>
+<p>다음 정보는 휴대폰 안에만 저장되며 개발자는 받지 않습니다.</p>
+<ul>
+<li>찜한 관광지, 고른 언어, 분류 필터 설정</li>
+<li>받아 둔 축제·행사 자료와 쇼핑 목록(하루 한 번 새로 받음)</li>
+</ul>
+<p>관광지·3D 지도 자료는 앱과 함께 설치됩니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다.</p>
+
+<h2>2. 위치정보</h2>
+<ul>
+<li>내 주변 관광지: 이용자가 허락한 경우에만 휴대폰의 위치를 읽어 가까운 관광지를 거리순으로 보여 줍니다. 위치는 휴대폰 안에서만 쓰고 서버로 보내지 않으며 저장하지 않습니다.</li>
+</ul>
+<p>안드로이드 설정에서 위치 권한을 끄면 내 주변 기능은 쓸 수 없지만 나머지 기능은 그대로 쓸 수 있습니다.</p>
+
+<h2>3. 정보를 처리하는 곳</h2>
+<table>
+<tr><th>곳</th><th>하는 일</th></tr>
+<tr><td>Cloudflare(R2, Workers)</td><td>축제·행사 자료와 쇼핑 목록 파일을 앱에 전달(접속 기록에 IP 주소가 남을 수 있음). 개인정보는 저장하지 않습니다.</td></tr>
+<tr><td>Google(AdMob)</td><td>광고(아래 4번)</td></tr>
+</table>
+<p>서버는 대한민국 밖에 있을 수 있으며, 오가는 정보는 모두 TLS로 암호화됩니다. 개발자는 정보를 팔거나 제3자에게 넘기지 않습니다. 관광지·행사 자료는 한국관광공사 TourAPI 공공데이터이며 개인정보가 들어 있지 않습니다. 관광지 사진은 한국관광공사 서버에서 불러올 수 있습니다.</p>
+
+<h2>4. Google AdMob으로 전송되는 정보</h2>
+<p>앱의 홈과 관광지 상세 화면에 네이티브 광고가 있습니다. Google 모바일 광고 SDK가 아래 정보를 자동으로 수집합니다. 유럽 등 동의가 필요한 지역에서는 먼저 광고 동의를 묻습니다.</p>
+<table>
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>IP 주소</td><td>대략적인 위치를 추정하는 데 쓰일 수 있습니다.</td></tr>
+  <tr><td>앱 사용 정보</td><td>앱 실행, 탭 등</td></tr>
+  <tr><td>진단 정보</td><td>앱 실행 시간, 멈춤 비율, 에너지 사용량 등</td></tr>
+  <tr><td>기기·계정 식별자</td><td>Android 광고 ID, 앱 세트 ID 등</td></tr>
+</table>
+<p>수집 목적은 광고, 분석, 부정 사용 방지입니다. 보관 기간과 처리 방식은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 따르고, 광고 파트너 데이터 사용 방식은 <a href="https://policies.google.com/technologies/partner-sites">Google 안내</a>에서 볼 수 있습니다. 안드로이드 설정의 광고 ID 메뉴에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
+
+<h2>5. 외부 링크</h2>
+<p>쇼핑 탭의 상품, 관광지 홈페이지, 지도 앱(카카오맵·네이버 지도·티맵) 링크를 누르면 휴대폰의 브라우저나 해당 앱이 열립니다. 쇼핑 탭은 쿠팡 파트너스 활동의 일환으로, 구매가 이루어지면 개발자가 일정액의 수수료를 받을 수 있습니다. 열린 사이트·앱에서의 정보 처리는 각 회사의 방침을 따릅니다.</p>
+
+<h2>6. 권한</h2>
+<table>
+<tr><th>권한</th><th>쓰는 곳</th></tr>
+<tr><td>위치(정확한 위치, 대략적인 위치)</td><td>내 주변 관광지. 허락을 받은 뒤에만 씁니다.</td></tr>
+<tr><td>인터넷</td><td>축제·행사 자료와 쇼핑 목록 받기, 관광지 사진, 광고</td></tr>
+<tr><td>광고 ID 관련 권한</td><td>Google 광고 기능에 쓰입니다.</td></tr>
+</table>
+
+<h2>7. 아동</h2>
+<p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 개발자는 나이나 실명 같은 정보를 받지 않습니다.</p>
+
+<h2>8. 이용자의 권리와 문의</h2>
+<p>앱에는 계정이 없어 서버에 지울 개인 자료가 없습니다. 휴대폰 안의 정보는 앱 삭제나 앱 데이터 삭제로 지울 수 있습니다. 문의는 아래로 연락해 주세요.</p>
+<p>개인정보 보호 담당: Terranode<br>이메일: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a></p>
+
+<h2>9. 변경</h2>
+<p>이 방침이 바뀌면 이 페이지의 시행일과 내용을 고쳐 표시합니다.</p>
+
+<div class="en" lang="en">
+<h2>TravelView Privacy Policy (summary in English)</h2>
+<p>TravelView is made by Terranode. There is no sign-up or login, and the developer stores no personal information on servers. Favorites and settings stay on your phone. Location is used only on the phone, with your permission, to show nearby sights; it is never sent or stored. Cloudflare delivers event and shopping list files (server logs may record IP addresses). Google AdMob shows native ads and may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention; users in the EEA, UK and Switzerland are asked for consent first. Shopping links are part of the Coupang Partners program and the developer may earn a commission. The app is not directed at children under 14. Contact: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a>. Effective November 16, 2026.</p>
+</div>
+</body>
+</html>
