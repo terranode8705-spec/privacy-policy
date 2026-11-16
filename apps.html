@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terranode 앱</title>
+<meta name="description" content="Terranode가 만드는 3D 아웃도어·여행 앱: 등산객, 캠핑뷰, 낚시객, 관광 3D">
+<style>
+  :root { --bg: #f6f7f5; --card: #fff; --ink: #1f2421; --sub: #5d655f; --line: #e2e5e1; --accent: #2f6f4f; --chip: #e8f1ec; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.65 -apple-system, "Malgun Gothic", "Noto Sans KR", sans-serif; word-break: keep-all; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 16px 56px; }
+  header h1 { font-size: 28px; line-height: 1.3; margin: 0 0 6px; }
+  header p { margin: 0; color: var(--sub); }
+  .apps { display: grid; gap: 16px; margin-top: 28px; }
+  .app { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; display: grid; grid-template-columns: 1fr; gap: 14px; }
+  .head { display: flex; gap: 14px; align-items: center; }
+  .icon { width: 64px; height: 64px; border-radius: 16px; flex: none; object-fit: cover; }
+  .icon.tour { background: linear-gradient(135deg, #3d7fb8, #6cb38a); color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+  .app h2 { font-size: 20px; margin: 0; }
+  .chip { display: inline-block; margin-top: 4px; font-size: 13px; color: var(--accent); background: var(--chip); border-radius: 999px; padding: 2px 10px; }
+  .app p { margin: 0; }
+  .app ul { margin: 0; padding-left: 20px; color: var(--sub); font-size: 15px; }
+  .shot { width: 100%; max-width: 270px; border-radius: 12px; border: 1px solid var(--line); justify-self: center; }
+  .links { font-size: 14px; color: var(--sub); }
+  .links a { color: var(--accent); }
+  @media (min-width: 640px) {
+    .app { grid-template-columns: 1fr 200px; align-items: start; }
+    .app .body { grid-column: 1; }
+    .shot { grid-column: 2; grid-row: 1 / span 2; width: 200px; }
+  }
+  footer { margin-top: 36px; font-size: 14px; color: var(--sub); }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Terranode 앱</h1>
+    <p>위성 사진과 지형 자료로 한국의 산·캠핑장·바다·관광지를 3D로 미리 보여 주는 안드로이드 앱을 만듭니다.</p>
+  </header>
+
+  <section class="apps">
+    <article class="app">
+      <div class="body">
+        <div class="head">
+          <img class="icon" src="img/hiking-icon.png" alt="등산객 아이콘">
+          <div><h2>등산객 (Hiking Korea)</h2><span class="chip">Google Play 출시 준비 중</span></div>
+        </div>
+        <p style="margin-top:12px">전국 4,000여 개 산을 3D로 미리 보고, 정상까지 가는 길을 찾아보세요.</p>
+        <ul style="margin-top:8px">
+          <li>산 입체 지형, 100대 명산, 내 주변 산</li>
+          <li>들머리~정상 길 안내, 거리·오르막·예상 시간</li>
+          <li>산행 기록, 기상청 주간 예보, 일출·일몰</li>
+        </ul>
+        <p class="links" style="margin-top:10px"><a href="https://terranode8705-spec.github.io/privacy-policy/hiking.html">개인정보처리방침</a></p>
+      </div>
+      <img class="shot" src="img/hiking-shot.jpg" alt="등산객 3D 산 화면" loading="lazy">
+    </article>
+
+    <article class="app">
+      <div class="body">
+        <div class="head">
+          <img class="icon" src="img/camping-icon.png" alt="캠핑뷰 아이콘">
+          <div><h2>캠핑뷰</h2><span class="chip">Google Play 출시 준비 중</span></div>
+        </div>
+        <p style="margin-top:12px">전국 캠핑장 주변의 숲·물·지형을 3D로 미리 보고, 풍경·지역·날씨로 캠핑장을 찾아보세요.</p>
+        <ul style="margin-top:8px">
+          <li>고캠핑 등록 캠핑장 3천여 곳의 주변 3D 풍경</li>
+          <li>산·숲·계곡·바다·호수 같은 풍경으로 찾기</li>
+          <li>지역별 둘러보기, 날씨</li>
+        </ul>
+        <p class="links" style="margin-top:10px"><a href="https://terranode8705-spec.github.io/privacy-policy/camping.html">개인정보처리방침</a></p>
+      </div>
+      <img class="shot" src="img/camping-shot.jpg" alt="캠핑뷰 3D 캠핑장 주변 화면" loading="lazy">
+    </article>
+
+    <article class="app">
+      <div class="body">
+        <div class="head">
+          <img class="icon" src="img/fishing-icon.png" alt="낚시객 아이콘">
+          <div><h2>낚시객</h2><span class="chip">Google Play 출시 준비 중</span></div>
+        </div>
+        <p style="margin-top:12px">전국 섬·해안 낚시터의 바다 밑 지형과 물때·해류·날씨를 3D 지도로 미리 보세요.</p>
+        <ul style="margin-top:8px">
+          <li>낚시터 935곳의 해저 지형과 수심, 해류</li>
+          <li>물때, 바다낚시지수, 바람, 주간 날씨</li>
+          <li>위판장 기록으로 보는 이 바다의 어종</li>
+        </ul>
+        <p class="links" style="margin-top:10px"><a href="https://terranode8705-spec.github.io/privacy-policy/fishing.html">개인정보처리방침</a></p>
+      </div>
+      <img class="shot" src="img/fishing-shot.jpg" alt="낚시객 3D 해저 지형 지도 화면" loading="lazy">
+    </article>
+
+    <article class="app">
+      <div class="body">
+        <div class="head">
+          <div class="icon tour">3D</div>
+          <div><h2>관광 3D</h2><span class="chip">개발 중</span></div>
+        </div>
+        <p style="margin-top:12px">전국 관광지를 시·군·구 3D 지형 위에 핀으로 보여 주는 여행 앱입니다.</p>
+        <ul style="margin-top:8px">
+          <li>한국관광 100선과 전국 관광지</li>
+          <li>지역별 3D 지형(위성 사진)과 관광지 위치</li>
+          <li>축제·행사 소식</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <footer>
+    <p>개발자: Terranode · 문의: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a></p>
+    <p>지도·관광 자료는 한국관광공사, 기상청, 국립해양조사원 등 공공데이터를 바탕으로 합니다.</p>
+  </footer>
+</div>
+</body>
+</html>
