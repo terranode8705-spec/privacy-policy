@@ -18,66 +18,77 @@
 </head>
 <body>
 <h1>아이동네 개인정보처리방침</h1>
-<p class="date">시행일: 2026년 11월 18일</p>
-<p>아이동네 앱(외국어 이름 Kids Around, 이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱은 부모·보호자가 소아과, 수유실, 키즈카페, 어린이 체험 장소를 찾도록 돕는 앱입니다. 앱에는 가입·로그인이 없고, 이름·전화번호·이메일을 묻지 않습니다. 개발자는 이용자 개인을 알아볼 수 있는 정보를 서버에 저장하지 않습니다.</p>
+<p class="date">시행일: 2026년 11월 19일 (후기 서버 내용 추가)</p>
+<p>아이동네 앱(외국어 이름 Kids Around, 이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱은 부모·보호자가 소아과, 수유실, 키즈카페, 어린이 체험 장소를 찾도록 돕는 앱입니다. 앱에는 가입·로그인이 없고, 이름·전화번호·이메일을 묻지 않습니다. 후기를 나누기 위해 앱을 처음 켤 때 무작위 별명의 익명 계정(가계정)이 만들어지며, 실명이나 연락처와 연결되지 않습니다.</p>
 
 <h2>1. 휴대폰 안에만 저장되는 정보</h2>
 <p>다음 정보는 휴대폰 안에만 저장되며 개발자는 받지 않습니다.</p>
 <ul>
-<li>즐겨찾기한 장소, 고른 언어, 분류 필터 설정</li>
-<li>아이 나이(돌 전~13세 중 하나, 고른 경우에만). 체험·키즈카페를 나이에 맞게 고르는 데만 씁니다. 이름이나 생일은 받지 않습니다.</li>
-<li>장소에 남긴 후기(별점과 짧은 글)와 후기 보기 남은 시간</li>
+  <li>즐겨찾기한 장소, 고른 언어, 분류 필터 설정</li>
+  <li>아이 나이(돌 전~13세 중 하나, 고른 경우에만). 체험·키즈카페를 나이에 맞게 고르는 데만 씁니다. 이름이나 생일은 받지 않습니다.</li>
+  <li>가계정 열쇠(휴대폰 보호 저장소에 암호화해 둠)</li>
+  <li>보상형 광고를 본 뒤 후기를 볼 수 있는 시간</li>
 </ul>
-<p>장소·3D 지도 자료는 앱과 함께 설치됩니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다.</p>
+<p>장소·3D 지도 자료는 앱과 함께 설치됩니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다. 프로필 화면의 계정 삭제를 누르면 서버의 계정과 후기도 함께 지워집니다.</p>
+
+<h2>1-1. 서버에 저장되는 정보(후기)</h2>
+<table>
+  <tr><th>항목</th><th>내용</th><th>보관</th></tr>
+  <tr><td>가계정</td><td>무작위 별명(이용자가 바꿀 수 있음), 색 아이콘 번호, 열쇠의 해시값(열쇠 원본은 저장하지 않음), 마지막 접속 날짜, 위치정보 이용 동의 시각(위치 자체는 저장하지 않음)</td><td>계정 삭제 때까지. 1년 넘게 접속하지 않으면 후기와 함께 자동 삭제</td></tr>
+  <tr><td>후기</td><td>장소 ID·이름·분류, 별점(1~5), 댓글(2~300자), 작성 시각</td><td>이용자가 지우거나 계정을 지울 때까지</td></tr>
+  <tr><td>신고</td><td>어떤 계정이 어떤 후기를 신고했는지와 시각(신고 사유는 받지 않음)</td><td>후기가 지워질 때까지</td></tr>
+</table>
+<p>후기는 올리면 바로 다른 이용자에게 별명과 함께 공개됩니다. 전화번호처럼 보이는 글은 올라가지 않습니다. 신고가 3번 모인 후기는 공개 목록과 별점에서 자동으로 빠지고, 개발자가 확인해 지우거나 다시 공개합니다. 정책을 어긴 계정은 사용이 정지될 수 있습니다. 후기에 아이 이름·연락처 같은 개인정보를 쓰지 마세요.</p>
 
 <h2>2. 위치정보</h2>
 <ul>
-<li><b>내 주변 장소:</b> 이용자가 허락한 경우에만 휴대폰의 위치를 읽어 가까운 소아과·수유실 등을 거리순으로 보여 줍니다. 위치는 휴대폰 안에서만 쓰고 서버로 보내지 않으며 저장하지 않습니다.</li>
+  <li>내 주변 장소: 이용자가 허락한 경우에만 휴대폰의 위치를 읽어 가까운 소아과·수유실 등을 거리순으로 보여 줍니다. 위치는 휴대폰 안에서만 쓰고 서버로 보내지 않습니다.</li>
+  <li>안드로이드 설정에서 위치 권한을 끄면 내 주변 기능은 쓸 수 없지만 나머지 기능은 그대로 쓸 수 있습니다.</li>
 </ul>
-<p>안드로이드 설정에서 위치 권한을 끄면 내 주변 기능은 쓸 수 없지만 나머지 기능은 그대로 쓸 수 있습니다.</p>
 
 <h2>3. 정보를 처리하는 곳</h2>
 <table>
-<tr><th>곳</th><th>하는 일</th></tr>
-<tr><td>Google(AdMob)</td><td>광고(아래 4번)</td></tr>
+  <tr><th>곳</th><th>하는 일</th></tr>
+  <tr><td>Cloudflare(Workers, D1)</td><td>가계정·후기 서버와 저장소(위 1-1). 접속 기록에 IP 주소가 남을 수 있으며, 가입·글쓰기 횟수 제한에 IP 주소를 잠시 씁니다.</td></tr>
+  <tr><td>Google(AdMob)</td><td>광고(아래 4번)</td></tr>
 </table>
-<p>개발자가 운영하는 서버는 없으며, 광고 서버와 오가는 정보는 TLS로 암호화됩니다. 개발자는 정보를 팔거나 제3자에게 넘기지 않습니다. 장소 자료는 건강보험심사평가원, 국립중앙의료원, 소상공인시장진흥공단, 한국관광공사, 한국문화정보원, 행정안전부의 공공데이터이며 이용자의 개인정보가 들어 있지 않습니다.</p>
+<p>서버는 대한민국 밖에 있을 수 있으며, 오가는 정보는 모두 TLS로 암호화됩니다. 개발자는 정보를 팔거나 제3자에게 넘기지 않습니다. 장소 자료는 건강보험심사평가원, 국립중앙의료원, 소상공인시장진흥공단, 한국관광공사, 한국문화정보원, 행정안전부의 공공데이터이며 이용자의 개인정보가 들어 있지 않습니다. 앱은 진료가 필요한지 판단하거나 병원을 추천하지 않습니다.</p>
 
 <h2>4. Google AdMob으로 전송되는 정보</h2>
 <p>앱의 홈과 장소 상세 화면에 네이티브 광고가 있고, 후기를 남기거나 볼 때 보상형 광고를 볼 수 있습니다. Google 모바일 광고 SDK가 아래 정보를 자동으로 수집합니다. 유럽 등 동의가 필요한 지역에서는 먼저 광고 동의를 묻습니다.</p>
 <table>
-<tr><th>항목</th><th>내용</th></tr>
-<tr><td>IP 주소</td><td>대략적인 위치를 추정하는 데 쓰일 수 있습니다.</td></tr>
-<tr><td>앱 사용 정보</td><td>앱 실행, 탭 등</td></tr>
-<tr><td>진단 정보</td><td>앱 실행 시간, 멈춤 비율, 에너지 사용량 등</td></tr>
-<tr><td>기기·계정 식별자</td><td>Android 광고 ID, 앱 세트 ID 등</td></tr>
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>IP 주소</td><td>대략적인 위치를 추정하는 데 쓰일 수 있습니다.</td></tr>
+  <tr><td>앱 사용 정보</td><td>앱 실행, 탭 등</td></tr>
+  <tr><td>진단 정보</td><td>앱 실행 시간, 멈춤 비율, 에너지 사용량 등</td></tr>
+  <tr><td>기기·계정 식별자</td><td>Android 광고 ID, 앱 세트 ID 등</td></tr>
 </table>
-<p>수집 목적은 광고, 분석, 부정 사용 방지입니다. 보관 기간과 처리 방식은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 따르고, 광고 파트너 데이터 사용 방식은 <a href="https://policies.google.com/technologies/partner-sites">Google 안내</a>에서 볼 수 있습니다. 안드로이드 설정의 광고 ID 메뉴에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
+<p>수집 목적은 광고, 분석, 부정 사용 방지입니다. 보관 기간과 처리 방식은 Google 개인정보처리방침을 따르고, 광고 파트너 데이터 사용 방식은 Google 안내에서 볼 수 있습니다. 안드로이드 설정의 광고 ID 메뉴에서 광고 ID를 재설정하거나 삭제할 수 있습니다.</p>
 
 <h2>5. 외부 링크</h2>
 <p>쇼핑 탭의 상품, 장소 홈페이지, 전화, 길 안내 앱(카카오내비·네이버 지도·티맵·구글 지도) 링크를 누르면 휴대폰의 브라우저나 해당 앱이 열립니다. 쇼핑 탭은 쿠팡 파트너스 활동의 일환으로, 구매가 이루어지면 개발자가 일정액의 수수료를 받을 수 있습니다. 열린 사이트·앱에서의 정보 처리는 각 회사의 방침을 따릅니다.</p>
 
 <h2>6. 권한</h2>
 <table>
-<tr><th>권한</th><th>쓰는 곳</th></tr>
-<tr><td>위치(정확한 위치, 대략적인 위치)</td><td>내 주변 장소. 허락을 받은 뒤에만 씁니다.</td></tr>
-<tr><td>인터넷</td><td>장소 사진, 광고</td></tr>
-<tr><td>광고 ID 관련 권한</td><td>Google 광고 기능에 쓰입니다.</td></tr>
+  <tr><th>권한</th><th>쓰는 곳</th></tr>
+  <tr><td>위치(정확한 위치, 대략적인 위치)</td><td>내 주변 장소. 허락을 받은 뒤에만 씁니다.</td></tr>
+  <tr><td>인터넷</td><td>후기 주고받기, 장소 사진, 광고</td></tr>
+  <tr><td>광고 ID 관련 권한</td><td>Google 광고 기능에 쓰입니다.</td></tr>
 </table>
 
 <h2>7. 아동</h2>
-<p>앱은 부모·보호자를 위한 앱이며 아동을 대상으로 하지 않습니다. 아이 나이는 휴대폰 안에만 저장되고 개발자에게 보내지 않으며, 아이의 이름·생일·사진은 받지 않습니다. 후기에는 아이 이름이나 연락처를 적지 않도록 안내하고, 전화번호 형태의 글은 올라가지 않습니다.</p>
+<p>앱은 부모·보호자를 위한 앱이며 아동을 대상으로 하지 않습니다. 아이 나이는 휴대폰 안에만 저장되고 개발자에게 보내지 않으며, 아이의 이름·생일·사진은 받지 않습니다.</p>
 
 <h2>8. 이용자의 권리와 문의</h2>
-<p>앱에는 계정이 없어 서버에 지울 개인 자료가 없습니다. 휴대폰 안의 정보는 앱 삭제나 앱 데이터 삭제로 지울 수 있고, 남긴 후기는 프로필 &gt; 내 후기에서 지울 수 있습니다. 문의는 아래로 연락해 주세요.</p>
-<p>개인정보 보호 담당: Terranode<br>이메일: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a></p>
+<p>내 후기는 앱에서 언제든 지울 수 있고, 프로필의 계정 삭제를 누르면 서버의 계정과 후기가 모두 지워집니다(<a href="kids-delete.html">계정·데이터 삭제 안내</a>). 앱을 이미 지워 계정 삭제를 누를 수 없거나 열람·정정이 필요하면 아래로 별명과 함께 연락해 주세요. 휴대폰 안의 정보는 앱 삭제나 앱 데이터 삭제로 지울 수 있습니다.</p>
+<p>개인정보 보호 담당: Terranode<br>이메일: terranode8705@gmail.com</p>
 
 <h2>9. 변경</h2>
-<p>이 방침이 바뀌면 이 페이지의 시행일과 내용을 고쳐 표시합니다. 후기를 다른 이용자와 함께 보는 기능(후기 서버)을 켜면, 그 전에 이 방침에 해당 내용을 더하고 앱 안에서 알립니다.</p>
+<p>이 방침이 바뀌면 이 페이지의 시행일과 내용을 고쳐 표시합니다.</p>
 
-<div class="en" lang="en">
+<div class="en">
 <h2>Kids Around Privacy Policy (summary in English)</h2>
-<p>Kids Around is made by Terranode for parents and caregivers looking for pediatricians, nursing rooms, kids cafés and children's activities. There is no sign-up or login, and the developer stores no personal information on servers. Favorites, settings, your child's age (if you choose one; no name or birthday) and the reviews you write stay on your phone. Location is used only on the phone, with your permission, to show nearby places; it is never sent or stored. Google AdMob shows native and rewarded ads and may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention; users in the EEA, UK and Switzerland are asked for consent first. Shopping links are part of the Coupang Partners program and the developer may earn a commission. The app is meant for parents and is not directed at children. Contact: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a>. Effective November 18, 2026.</p>
+<p>Kids Around is made by Terranode for parents and caregivers looking for pediatricians, nursing rooms, kids cafés and children's activities. There is no sign-up or login. To share reviews, an anonymous guest account with a random nickname is created on first launch; it is not linked to your real name or contacts. Reviews (rating, comment, place) and reports are stored on Cloudflare servers and shown to other users under the nickname; reviews reported three times are hidden automatically. Deleting the account in the app (Profile &gt; Delete account) deletes the account and its reviews; inactive accounts are deleted after one year. Favorites, settings and your child's age (if you choose one; no name or birthday) stay on your phone. Location is used only on the phone, with your permission, to show nearby places; it is never sent to a server. Google AdMob shows native and rewarded ads and may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention; users in the EEA, UK and Switzerland are asked for consent first. Shopping links are part of the Coupang Partners program and the developer may earn a commission. The app is meant for parents and is not directed at children. Contact: terranode8705@gmail.com. Effective November 19, 2026.</p>
 </div>
 </body>
 </html>
