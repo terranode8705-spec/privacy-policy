@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>폼플레이 개인정보처리방침</title>
+<style>
+  body { margin: 0 auto; max-width: 720px; padding: 24px 16px 48px; background: #fff; color: #222; font: 16px/1.7 -apple-system, "Malgun Gothic", "Noto Sans KR", sans-serif; word-break: keep-all; }
+  h1 { font-size: 26px; line-height: 1.35; margin: 0 0 8px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { border: 1px solid #ccc; padding: 8px; text-align: left; vertical-align: top; }
+  th { background: #f4f4f4; }
+  ul { padding-left: 20px; }
+  .date { color: #666; }
+  hr { margin: 48px 0 24px; border: 0; border-top: 1px solid #ddd; }
+</style>
+</head>
+<body>
+<h1>폼플레이 개인정보처리방침</h1>
+<p class="date">시행일: 2026년 11월 18일</p>
+<p>폼플레이(FormPlay) 앱(이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱에는 회원가입과 로그인이 없고, 개발자가 운영하는 서버로 보내는 정보도 없습니다. 카메라, 위치, 연락처, 마이크 권한을 쓰지 않습니다. 다만 앱에 들어 있는 Google AdMob 광고 기능이 아래 2번의 정보를 Google로 보냅니다.</p>
+
+<h2>1. 휴대폰 안에만 저장되는 정보</h2>
+<p>다음 정보는 운동 기록과 설정에 쓰이며 휴대폰 안에만 저장됩니다. 개발자는 이 정보를 받지도, 볼 수도 없습니다.</p>
+<ul>
+  <li>운동 기록: 날짜, 한 루틴, 운동 시간, 한 동작, 직접 고른 힘들기, 소모 열량 어림값</li>
+  <li>몸무게: 직접 입력한 경우에만 저장하며, 열량 어림 계산과 기록 그래프에만 씁니다.</li>
+  <li>설정: 언어, 안내 소리, 알림 시각, 운동 단계, 층간소음 설정, 4주 프로그램 진행</li>
+  <li>광고 보상으로 받은 자유 이용 종료 시각</li>
+</ul>
+<p>운동 안내 음성은 휴대폰에 설치된 음성 합성(TTS) 기능으로 만들며, 앱이 음성을 외부로 보내지 않습니다. 앱을 삭제하거나 앱의 설정 → "기록 모두 지우기", 또는 안드로이드 설정에서 앱 데이터를 지우면 함께 삭제됩니다.</p>
+
+<h2>2. Google AdMob으로 전송되는 정보</h2>
+<p>앱은 보상형 광고(운동을 시작할 때)와 네이티브 광고(홈 화면, 운동 끝 화면)를 보여 줍니다. 이 과정에서 Google 모바일 광고 SDK가 아래 정보를 자동으로 수집합니다.</p>
+<table>
+  <tr><th>항목</th><th>내용</th></tr>
+  <tr><td>IP 주소</td><td>대략적인 위치를 추정하는 데 쓰일 수 있습니다.</td></tr>
+  <tr><td>앱 사용 정보</td><td>앱 실행, 탭, 광고 시청 등</td></tr>
+  <tr><td>진단 정보</td><td>앱 실행 시간, 멈춤 비율, 에너지 사용량 등</td></tr>
+  <tr><td>기기·계정 식별자</td><td>Android 광고 ID, 앱 세트 ID, 해당하는 경우 기기에 로그인된 계정과 관련된 다른 식별자</td></tr>
+</table>
+<p>수집 목적은 광고, 분석, 부정 사용 방지입니다. 정보는 전송 중 TLS로 암호화됩니다. 받는 곳은 Google이며, Google의 서버가 대한민국 밖에 있을 수 있습니다. 보관 기간과 처리 방식은 <a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 따르고, 광고 파트너 데이터 사용 방식은 <a href="https://policies.google.com/technologies/partner-sites">Google 안내</a>에서 볼 수 있습니다. 운동 기록과 몸무게는 광고 SDK로 보내지 않습니다.</p>
+
+<h2>3. 광고 ID를 관리하는 방법</h2>
+<p>안드로이드 설정의 광고 ID 메뉴에서 광고 ID를 재설정하거나 삭제할 수 있습니다. 메뉴 위치는 기기마다 조금 다릅니다.</p>
+
+<h2>4. 권한</h2>
+<table>
+  <tr><th>권한</th><th>쓰는 이유</th></tr>
+  <tr><td>인터넷, 네트워크 상태</td><td>광고를 불러옵니다. 운동 안내와 기록은 인터넷 없이도 동작합니다.</td></tr>
+  <tr><td>알림</td><td>직접 켠 경우에만 정해진 시각에 운동 알림을 보냅니다.</td></tr>
+  <tr><td>부팅 완료 수신</td><td>휴대폰을 다시 켠 뒤에도 켜 둔 운동 알림을 다시 맞춥니다.</td></tr>
+  <tr><td>광고 ID 관련 권한</td><td>Google 광고 기능에 쓰입니다.</td></tr>
+</table>
+
+<h2>5. 건강 정보와 의학적 조언</h2>
+<p>앱은 운동 안내 앱이며 의학적 진단이나 조언을 하지 않습니다. 소모 열량은 MET 값과 입력한 몸무게로 계산한 어림값입니다. 앱은 심박수나 걸음 수 같은 신체 센서 정보를 읽지 않습니다.</p>
+
+<h2>6. 어린이</h2>
+<p>앱은 어린이를 주 대상으로 하지 않으며, 개발자는 나이나 이름 같은 정보를 받지 않습니다.</p>
+
+<h2>7. 이용자의 권리와 문의</h2>
+<p>개발자는 이용자를 알아볼 수 있는 정보를 갖고 있지 않아, 휴대폰 안의 정보는 위 1번 방법으로 직접 지우실 수 있습니다. Google이 처리하는 정보는 Google 계정 설정이나 위 Google 방침의 절차로 요청할 수 있습니다. 궁금한 점은 아래로 연락해 주세요.</p>
+<p>개인정보 보호 담당: Terranode<br>이메일: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a></p>
+
+<h2>8. 변경</h2>
+<p>이 방침이 바뀌면 이 페이지에 변경 내용과 시행일을 표시합니다.</p>
+
+<hr>
+<h1 lang="en">FormPlay Privacy Policy</h1>
+<p class="date" lang="en">Effective: November 18, 2026</p>
+<div lang="en">
+<p>FormPlay (the "app") is made by Terranode. The app has no sign-up or login and sends nothing to a server of the developer. It does not use the camera, location, contacts or microphone.</p>
+<p><b>Kept on the phone only:</b> workout records (date, routine, time, moves, effort you choose, estimated calories), your body weight if you enter it, settings, 4-week program progress and the end time of the ad-reward free use. Voice guidance uses the phone's text-to-speech. Deleting the app, "Delete all records" in the app's settings, or clearing the app's data removes them.</p>
+<p><b>Sent to Google AdMob:</b> the Google Mobile Ads SDK (rewarded ads when a workout starts, native ads on the home and finish screens) collects IP address (approximate location), app interactions, diagnostics and device or other identifiers (advertising ID, app set ID) for advertising, analytics and fraud prevention, encrypted in transit. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Workout records and body weight are not sent to the ads SDK. You can reset or delete the advertising ID in Android settings.</p>
+<p><b>Permissions:</b> internet and network state (ads), notifications (workout reminders you turn on), boot completed (restore those reminders), advertising ID (Google ads).</p>
+<p>The app is a workout guide and gives no medical advice; calories are estimates. It is not directed at children.</p>
+<p>Contact: Terranode, <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a>. Changes will be shown on this page with their date.</p>
+</div>
+</body>
+</html>
