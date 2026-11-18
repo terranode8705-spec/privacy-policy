@@ -19,16 +19,25 @@
 <body>
 <h1>페스팟 개인정보처리방침</h1>
 <p class="date">시행일: 2026년 11월 18일</p>
-<p>페스팟 앱(외국어 이름 Fespot, 이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱에는 회원 가입이 없고, 이름·전화번호·이메일을 묻지 않습니다. 개발자는 이용자 개인을 알아볼 수 있는 정보를 서버에 저장하지 않습니다.</p>
+<p>페스팟 앱(외국어 이름 Fespot, 이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱은 이름·전화번호·이메일을 받지 않습니다. 처음 실행할 때 무작위 별명으로 된 손님 계정을 자동으로 만들고, 후기 쓰기·신고 같은 기능에만 이 계정을 씁니다.</p>
 
 <h2>1. 휴대폰 안에만 저장되는 정보</h2>
 <p>다음 정보는 휴대폰 안에만 저장되며 개발자는 받지 않습니다.</p>
 <ul>
 <li>즐겨찾기한 행사·공방, 고른 언어, 분류 필터 설정</li>
-<li>앱이 처음 켜질 때 만들어지는 손님 계정(무작위 별명)과 이용자가 남긴 후기(별점·글)</li>
+<li>손님 계정의 접속 열쇠(안드로이드 키 저장소로 암호화해 앱 전용 공간에 보관)</li>
 <li>광고를 보고 받은 후기 보기 시간</li>
 </ul>
-<p>행사 자료와 시·도 3D 지도 자료는 앱과 함께 설치됩니다. 프로필 화면의 계정 삭제, 앱 삭제, 안드로이드 설정의 앱 데이터 삭제로 휴대폰 안의 정보를 지울 수 있습니다. 후기에는 실명·연락처 같은 개인정보를 적지 말아 주세요.</p>
+<p>행사 자료와 시·도 3D 지도 자료는 앱과 함께 설치됩니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다.</p>
+
+<h2>1-1. 서버에 저장되는 정보</h2>
+<table>
+<tr><th>항목</th><th>내용</th><th>보관</th></tr>
+<tr><td>손님 계정</td><td>계정 번호, 별명, 아이콘 색, 마지막 접속일, 내 후기가 받은 신고 수</td><td>계정을 삭제할 때까지. 1년 넘게 접속하지 않으면 계정과 후기를 지웁니다.</td></tr>
+<tr><td>후기</td><td>별점, 글(2~300자), 행사·공방 이름, 올린 시각</td><td>후기나 계정을 삭제할 때까지</td></tr>
+<tr><td>신고</td><td>누가 어느 후기를 언제 신고했는지(신고 내용은 받지 않습니다)</td><td>후기나 계정을 삭제할 때까지</td></tr>
+</table>
+<p>올린 후기와 별명은 모든 이용자가 볼 수 있습니다. 후기에는 실명·연락처 같은 개인정보를 적지 말아 주세요(전화번호처럼 보이는 글은 올라가지 않습니다). 신고가 일정 수 이상 모이면 공개 목록에서 빠지고, 개발자가 확인해 지울 수 있습니다. 프로필 화면의 계정 삭제를 누르면 계정과 후기가 서버에서 바로 지워지며 되돌릴 수 없습니다(<a href="https://terranode8705-spec.github.io/privacy-policy/fespot-delete.html">계정·데이터 삭제 안내</a>).</p>
 
 <h2>2. 위치정보</h2>
 <ul>
@@ -39,10 +48,11 @@
 <h2>3. 정보를 처리하는 곳</h2>
 <table>
 <tr><th>곳</th><th>하는 일</th></tr>
+<tr><td>Cloudflare(D1, Workers)</td><td>손님 계정과 후기 저장(접속 기록에 IP 주소가 남을 수 있음)</td></tr>
 <tr><td>Google(AdMob)</td><td>광고(아래 4번)</td></tr>
 <tr><td>공연예술통합전산망(KOPIS)·한국관광공사 서버</td><td>행사 상세를 열 때 포스터·사진을 불러옴(접속 기록에 IP 주소가 남을 수 있음)</td></tr>
 </table>
-<p>오가는 정보는 모두 TLS로 암호화됩니다. 개발자는 정보를 팔거나 제3자에게 넘기지 않습니다. 행사 자료는 한국관광공사 TourAPI, KOPIS 공연예술통합전산망, 국가유산청의 공공데이터이며 개인정보가 들어 있지 않습니다. 나중에 행사 자료를 매일 새로 받는 서버(Cloudflare)를 쓰게 되면 이 방침을 고쳐 알립니다.</p>
+<p>서버는 대한민국 밖에 있을 수 있으며, 오가는 정보는 모두 TLS로 암호화됩니다. 개발자는 정보를 팔거나 제3자에게 넘기지 않습니다. 행사 자료는 한국관광공사 TourAPI, KOPIS 공연예술통합전산망, 국가유산청의 공공데이터이며 개인정보가 들어 있지 않습니다.</p>
 
 <h2>4. Google AdMob으로 전송되는 정보</h2>
 <p>앱의 홈과 행사 상세 화면에 네이티브 광고가 있고, 후기를 모두 보려는 이용자가 직접 고른 경우에만 보상형 광고가 나옵니다. Google 모바일 광고 SDK가 아래 정보를 자동으로 수집합니다. 유럽 등 동의가 필요한 지역에서는 먼저 광고 동의를 묻습니다.</p>
@@ -62,7 +72,7 @@
 <table>
 <tr><th>권한</th><th>쓰는 곳</th></tr>
 <tr><td>위치(정확한 위치, 대략적인 위치)</td><td>내 주변 행사. 허락을 받은 뒤에만 씁니다.</td></tr>
-<tr><td>인터넷</td><td>포스터·사진, 광고</td></tr>
+<tr><td>인터넷</td><td>손님 계정과 후기, 포스터·사진, 광고</td></tr>
 <tr><td>광고 ID 관련 권한</td><td>Google 광고 기능에 쓰입니다.</td></tr>
 </table>
 
@@ -70,7 +80,7 @@
 <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 개발자는 나이나 실명 같은 정보를 받지 않습니다.</p>
 
 <h2>8. 이용자의 권리와 문의</h2>
-<p>앱의 손님 계정과 후기는 휴대폰 안에만 있어 서버에 지울 개인 자료가 없습니다. 휴대폰 안의 정보는 프로필 화면의 계정 삭제, 앱 삭제나 앱 데이터 삭제로 지울 수 있습니다. 문의는 아래로 연락해 주세요.</p>
+<p>프로필 화면에서 별명과 아이콘을 바꾸고, 내 후기를 지우고, 계정을 삭제할 수 있습니다. 앱을 쓸 수 없는 경우나 그 밖의 요청은 아래로 연락해 주세요. Google이 처리하는 정보는 Google 계정 설정이나 위 Google 방침의 절차로 요청할 수 있습니다.</p>
 <p>개인정보 보호 담당: Terranode<br>이메일: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a></p>
 
 <h2>9. 변경</h2>
@@ -78,7 +88,7 @@
 
 <div class="en" lang="en">
 <h2>Fespot Privacy Policy (summary in English)</h2>
-<p>Fespot is made by Terranode. There is no sign-up, and the developer stores no personal information on servers. Favorites, settings, the guest account (a random nickname) and the reviews you write stay on your phone; you can delete them with "Delete account" in the profile screen or by removing the app. Location is used only on the phone, with your permission, to show nearby events; it is never sent or stored. Event posters and photos are loaded from KOPIS and Korea Tourism Organization servers when you open an event. Google AdMob shows native ads, and a rewarded ad only when you choose to unlock all reviews; it may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention. Users in the EEA, UK and Switzerland are asked for consent first. If the shopping tab is enabled, its links are part of the Coupang Partners program and the developer may earn a commission. The app is not directed at children under 14. Contact: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a>. Effective November 18, 2026.</p>
+<p>Fespot is made by Terranode. The app asks for no name, phone number or email. On first launch it creates a guest account with a random nickname, used only for reviews and reports. The server (Cloudflare) stores the account number, nickname, icon colour, last visit date, report count, and your reviews (rating, text, event name, time); reviews and nicknames are public. Accounts inactive for over a year are deleted with their reviews, and "Delete account" in the profile screen deletes them immediately (<a href="https://terranode8705-spec.github.io/privacy-policy/fespot-delete.html">account deletion</a>). Favorites and settings stay on your phone. Location is used only on the phone, with your permission, to show nearby events; it is never sent or stored. Event posters and photos are loaded from KOPIS and Korea Tourism Organization servers when you open an event. Google AdMob shows native ads, and a rewarded ad only when you choose to unlock all reviews; it may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention. Users in the EEA, UK and Switzerland are asked for consent first. The app is not directed at children under 14. Contact: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a>. Effective November 18, 2026.</p>
 </div>
 </body>
 </html>
