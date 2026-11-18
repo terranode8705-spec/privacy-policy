@@ -18,18 +18,27 @@
 </head>
 <body>
 <h1>우리부모케어 개인정보처리방침</h1>
-<p class="date">시행일: 2026년 11월 18일</p>
-<p>우리부모케어 앱(이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱은 국민건강보험공단이 공개한 장기요양기관 정보를 지도와 목록으로 보여 줍니다. 앱에는 가입·로그인이 없고, 이름·전화번호·이메일·건강 정보를 묻지 않습니다. 개발자는 이용자 개인을 알아볼 수 있는 정보를 서버에 저장하지 않습니다.</p>
+<p class="date">시행일: 2026년 11월 18일 (같은 날 후기 서버 내용 추가)</p>
+<p>우리부모케어 앱(이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱은 국민건강보험공단이 공개한 장기요양기관 정보를 지도와 목록으로 보여 줍니다. 앱에는 가입·로그인이 없고, 이름·전화번호·이메일·건강 정보를 묻지 않습니다. 후기를 나누기 위해 앱을 처음 켤 때 무작위 별명의 익명 계정(가계정)이 만들어지며, 실명이나 연락처와 연결되지 않습니다.</p>
 
 <h2>1. 휴대폰 안에만 저장되는 정보</h2>
 <p>다음 정보는 휴대폰 안에만 저장되며 개발자는 받지 않습니다.</p>
 <ul>
 <li>관심 기관, 비교 목록, 글자 크기, 거르기 설정</li>
-<li>앱이 정해 준 별명(무작위 이름)과 이용자가 쓴 후기·별점, 신고한 후기 목록</li>
+<li>가계정 열쇠(휴대폰 보호 저장소에 암호화해 둠)</li>
 <li>마지막으로 찾은 내 위치(다음에 앱을 열 때 먼저 보여 주기 위해서)</li>
 <li>보상형 광고를 본 뒤 후기를 볼 수 있는 시간</li>
 </ul>
-<p>기관 자료와 3D 지도 자료는 앱과 함께 설치됩니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다. 프로필 화면의 계정 삭제로도 별명과 후기를 지울 수 있습니다.</p>
+<p>기관 자료와 3D 지도 자료는 앱과 함께 설치됩니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다. 프로필 화면의 계정 삭제를 누르면 서버의 계정과 후기도 함께 지워집니다.</p>
+
+<h2>1-1. 서버에 저장되는 정보(후기)</h2>
+<table>
+<tr><th>항목</th><th>내용</th><th>보관</th></tr>
+<tr><td>가계정</td><td>무작위 별명(이용자가 바꿀 수 있음), 색 아이콘 번호, 열쇠의 해시값(열쇠 원본은 저장하지 않음), 마지막 접속 날짜, 위치정보 이용 동의 시각(위치 자체는 저장하지 않음)</td><td>계정 삭제 때까지. 1년 넘게 접속하지 않으면 후기와 함께 자동 삭제</td></tr>
+<tr><td>후기</td><td>기관 ID·이름, 별점(1~5), 댓글(2~300자), 작성 시각</td><td>이용자가 지우거나 계정을 지울 때까지</td></tr>
+<tr><td>신고</td><td>어떤 계정이 어떤 후기를 신고했는지와 시각(신고 사유는 받지 않음)</td><td>후기가 지워질 때까지</td></tr>
+</table>
+<p>후기는 올리면 바로 다른 이용자에게 별명과 함께 공개됩니다. 전화번호처럼 보이는 글은 올라가지 않습니다. 신고가 3번 모인 후기는 공개 목록과 별점에서 자동으로 빠지고, 개발자가 확인해 지우거나 다시 공개합니다. 정책을 어긴 계정은 사용이 정지될 수 있습니다. 후기에 실명·연락처 같은 개인정보를 쓰지 마세요.</p>
 
 <h2>2. 위치정보</h2>
 <ul>
@@ -40,9 +49,10 @@
 <h2>3. 정보를 처리하는 곳</h2>
 <table>
 <tr><th>곳</th><th>하는 일</th></tr>
+<tr><td>Cloudflare(Workers, D1)</td><td>가계정·후기 서버와 저장소(위 1-1). 접속 기록에 IP 주소가 남을 수 있으며, 가입·글쓰기 횟수 제한에 IP 주소를 잠시 씁니다.</td></tr>
 <tr><td>Google(AdMob)</td><td>광고(아래 4번)</td></tr>
 </table>
-<p>개발자는 정보를 팔거나 제3자에게 넘기지 않습니다. 기관 정보는 국민건강보험공단의 공공데이터이며 이용자 개인정보가 들어 있지 않습니다. 앱은 기관을 추천하거나 순위를 매기지 않습니다.</p>
+<p>서버는 대한민국 밖에 있을 수 있으며, 오가는 정보는 모두 TLS로 암호화됩니다. 개발자는 정보를 팔거나 제3자에게 넘기지 않습니다. 기관 정보는 국민건강보험공단의 공공데이터이며 이용자 개인정보가 들어 있지 않습니다. 앱은 기관을 추천하거나 순위를 매기지 않습니다.</p>
 
 <h2>4. Google AdMob으로 전송되는 정보</h2>
 <p>앱의 홈과 기관 상세 화면에 네이티브 광고가 있고, 후기를 보거나 쓸 때 이용자가 고르면 보상형 광고가 나옵니다. Google 모바일 광고 SDK가 아래 정보를 자동으로 수집합니다. 유럽 등 동의가 필요한 지역에서는 먼저 광고 동의를 묻습니다.</p>
@@ -62,7 +72,7 @@
 <table>
 <tr><th>권한</th><th>쓰는 곳</th></tr>
 <tr><td>위치(정확한 위치, 대략적인 위치)</td><td>내 위치 근처 기관. 허락을 받은 뒤에만 씁니다.</td></tr>
-<tr><td>인터넷</td><td>광고</td></tr>
+<tr><td>인터넷</td><td>후기 주고받기, 광고</td></tr>
 <tr><td>광고 ID 관련 권한</td><td>Google 광고 기능에 쓰입니다.</td></tr>
 </table>
 
@@ -70,15 +80,15 @@
 <p>앱은 만 14세 미만 아동을 대상으로 하지 않으며, 개발자는 나이나 실명 같은 정보를 받지 않습니다.</p>
 
 <h2>8. 이용자의 권리와 문의</h2>
-<p>앱에는 서버 계정이 없어 서버에 지울 개인 자료가 없습니다. 휴대폰 안의 정보는 프로필의 계정 삭제, 앱 삭제, 앱 데이터 삭제로 지울 수 있습니다. 문의는 아래로 연락해 주세요.</p>
+<p>내 후기는 앱에서 언제든 지울 수 있고, 프로필의 계정 삭제를 누르면 서버의 계정과 후기가 모두 지워집니다. 앱을 이미 지워 계정 삭제를 누를 수 없거나 열람·정정이 필요하면 아래로 별명과 함께 연락해 주세요. 휴대폰 안의 정보는 앱 삭제나 앱 데이터 삭제로 지울 수 있습니다.</p>
 <p>개인정보 보호 담당: Terranode<br>이메일: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a></p>
 
 <h2>9. 변경</h2>
-<p>후기를 다른 이용자와 나누는 기능(서버)을 열면 이 방침을 먼저 고칩니다. 이 방침이 바뀌면 이 페이지의 시행일과 내용을 고쳐 표시합니다.</p>
+<p>이 방침이 바뀌면 이 페이지의 시행일과 내용을 고쳐 표시합니다.</p>
 
 <div class="en" lang="en">
 <h2>Woori Bumo Care Privacy Policy (summary in English)</h2>
-<p>Woori Bumo Care shows public long-term care facility data from the National Health Insurance Service. It is made by Terranode. There is no sign-up or login, and the developer stores no personal information on servers. Favorites, settings, a random nickname, your reviews and your last location stay on your phone. Location is used only on the phone, with your permission, to show nearby facilities; it is never sent to a server. Google AdMob shows native and rewarded ads and may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention; users in the EEA, UK and Switzerland are asked for consent first. The app is not directed at children under 14. Contact: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a>. Effective November 18, 2026.</p>
+<p>Woori Bumo Care shows public long-term care facility data from the National Health Insurance Service. It is made by Terranode. There is no sign-up or login. To share reviews, an anonymous guest account with a random nickname is created on first launch; it is not linked to your real name or contacts. Reviews (rating, comment, facility) and reports are stored on Cloudflare servers and shown to other users under the nickname; reviews reported three times are hidden automatically. Deleting the account in the app deletes the account and its reviews; inactive accounts are deleted after one year. Favorites, settings and your last location stay on your phone. Location is used only on the phone, with your permission, to show nearby facilities; it is never sent to a server. Google AdMob shows native and rewarded ads and may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention; users in the EEA, UK and Switzerland are asked for consent first. The app is not directed at children under 14. Contact: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a>. Effective November 18, 2026.</p>
 </div>
 </body>
 </html>
