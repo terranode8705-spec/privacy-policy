@@ -18,7 +18,7 @@
 </head>
 <body>
 <h1>아이동네 개인정보처리방침</h1>
-<p class="date">시행일: 2026년 11월 19일 (후기 서버 내용 추가)</p>
+<p class="date">시행일: 2026년 11월 25일</p>
 <p>아이동네 앱(외국어 이름 Kids Around, 이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱은 부모·보호자가 소아과, 수유실, 키즈카페, 어린이 체험 장소를 찾도록 돕는 앱입니다. 앱에는 가입·로그인이 없고, 이름·전화번호·이메일을 묻지 않습니다. 후기를 나누기 위해 앱을 처음 켤 때 무작위 별명의 익명 계정(가계정)이 만들어지며, 실명이나 연락처와 연결되지 않습니다.</p>
 
 <h2>1. 휴대폰 안에만 저장되는 정보</h2>
@@ -29,7 +29,7 @@
   <li>가계정 열쇠(휴대폰 보호 저장소에 암호화해 둠)</li>
   <li>보상형 광고를 본 뒤 후기를 볼 수 있는 시간</li>
 </ul>
-<p>장소·3D 지도 자료는 앱과 함께 설치됩니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다. 프로필 화면의 계정 삭제를 누르면 서버의 계정과 후기도 함께 지워집니다.</p>
+<p>장소 자료는 앱과 함께 설치되고, 3D 지도 자료는 지역을 처음 열 때 내려받아 휴대폰에 저장합니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다. 프로필 화면의 계정 삭제를 누르면 서버의 계정과 후기도 함께 지워집니다.</p>
 
 <h2>1-1. 서버에 저장되는 정보(후기)</h2>
 <table>
@@ -50,12 +50,13 @@
 <table>
   <tr><th>곳</th><th>하는 일</th></tr>
   <tr><td>Cloudflare(Workers, D1)</td><td>가계정·후기 서버와 저장소(위 1-1). 접속 기록에 IP 주소가 남을 수 있으며, 가입·글쓰기 횟수 제한에 IP 주소를 잠시 씁니다.</td></tr>
+  <tr><td>Amazon Web Services(CloudFront), Cloudflare(R2, Workers, Pages)</td><td>3D 지도 자료와 '추천 어플' 그림을 앱에 전달(접속 기록에 IP 주소가 남을 수 있음)</td></tr>
   <tr><td>Google(AdMob)</td><td>광고(아래 4번)</td></tr>
 </table>
 <p>서버는 대한민국 밖에 있을 수 있으며, 오가는 정보는 모두 TLS로 암호화됩니다. 개발자는 정보를 팔거나 제3자에게 넘기지 않습니다. 장소 자료는 건강보험심사평가원, 국립중앙의료원, 소상공인시장진흥공단, 한국관광공사, 한국문화정보원, 행정안전부의 공공데이터이며 이용자의 개인정보가 들어 있지 않습니다. 앱은 진료가 필요한지 판단하거나 병원을 추천하지 않습니다.</p>
 
 <h2>4. Google AdMob으로 전송되는 정보</h2>
-<p>앱의 홈과 장소 상세 화면에 네이티브 광고가 있고, 후기를 남기거나 볼 때 보상형 광고를 볼 수 있습니다. Google 모바일 광고 SDK가 아래 정보를 자동으로 수집합니다. 유럽 등 동의가 필요한 지역에서는 먼저 광고 동의를 묻습니다.</p>
+<p>앱의 홈과 장소 상세 화면에 네이티브 광고가 있고, 후기를 보려고 이용자가 고르면 보상형 광고가 나옵니다(한 번 보면 6시간). Google 모바일 광고 SDK가 아래 정보를 자동으로 수집합니다. 유럽 등 동의가 필요한 지역에서는 먼저 광고 동의를 묻습니다.</p>
 <table>
   <tr><th>항목</th><th>내용</th></tr>
   <tr><td>IP 주소</td><td>대략적인 위치를 추정하는 데 쓰일 수 있습니다.</td></tr>
@@ -67,6 +68,8 @@
 
 <h2>5. 외부 링크</h2>
 <p>쇼핑 탭의 상품, 장소 홈페이지, 전화, 길 안내 앱(카카오내비·네이버 지도·티맵·구글 지도) 링크를 누르면 휴대폰의 브라우저나 해당 앱이 열립니다. 쇼핑 탭은 쿠팡 파트너스 활동의 일환으로, 구매가 이루어지면 개발자가 일정액의 수수료를 받을 수 있습니다. 열린 사이트·앱에서의 정보 처리는 각 회사의 방침을 따릅니다.</p>
+
+<p>홈의 '추천 어플' 칸에 나오는 그림과 목록은 Cloudflare 서버에서 내려받습니다(접속 기록에 IP 주소가 남을 수 있음). 이 칸에는 같은 개발자의 앱 말고 다른 광고가 나올 수 있으며, 그 광고에는 '광고' 표시가 붙습니다. 누르면 Play 스토어나 그 광고의 페이지가 열립니다.</p>
 
 <h2>6. 권한</h2>
 <table>
@@ -88,7 +91,7 @@
 
 <div class="en">
 <h2>Kids Around Privacy Policy (summary in English)</h2>
-<p>Kids Around is made by Terranode for parents and caregivers looking for pediatricians, nursing rooms, kids cafés and children's activities. There is no sign-up or login. To share reviews, an anonymous guest account with a random nickname is created on first launch; it is not linked to your real name or contacts. Reviews (rating, comment, place) and reports are stored on Cloudflare servers and shown to other users under the nickname; reviews reported three times are hidden automatically. Deleting the account in the app (Profile &gt; Delete account) deletes the account and its reviews; inactive accounts are deleted after one year. Favorites, settings and your child's age (if you choose one; no name or birthday) stay on your phone. Location is used only on the phone, with your permission, to show nearby places; it is never sent to a server. Google AdMob shows native and rewarded ads and may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention; users in the EEA, UK and Switzerland are asked for consent first. Shopping links are part of the Coupang Partners program and the developer may earn a commission. The app is meant for parents and is not directed at children. Contact: terranode8705@gmail.com. Effective November 19, 2026.</p>
+<p>Kids Around is made by Terranode for parents and caregivers looking for pediatricians, nursing rooms, kids cafés and children's activities. There is no sign-up or login. To share reviews, an anonymous guest account with a random nickname is created on first launch; it is not linked to your real name or contacts. Reviews (rating, comment, place) and reports are stored on Cloudflare servers and shown to other users under the nickname; reviews reported three times are hidden automatically. Deleting the account in the app (Profile &gt; Delete account) deletes the account and its reviews; inactive accounts are deleted after one year. Favorites, settings and your child's age (if you choose one; no name or birthday) stay on your phone. Location is used only on the phone, with your permission, to show nearby places; it is never sent to a server. 3D map data and app banners are delivered by Cloudflare and Amazon CloudFront (server logs may record IP addresses). Google AdMob shows native and rewarded ads and may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention; users in the EEA, UK and Switzerland are asked for consent first. Shopping links are part of the Coupang Partners program and the developer may earn a commission. The app is meant for parents and is not directed at children. Contact: terranode8705@gmail.com. Effective November 25, 2026.</p>
 </div>
 </body>
 </html>

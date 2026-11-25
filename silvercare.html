@@ -18,7 +18,7 @@
 </head>
 <body>
 <h1>우리부모케어 개인정보처리방침</h1>
-<p class="date">시행일: 2026년 11월 18일 (11월 18일 후기 서버, 11월 20일 쇼핑 링크 내용 추가)</p>
+<p class="date">시행일: 2026년 11월 25일</p>
 <p>우리부모케어 앱(이하 "앱")을 만든 Terranode(이하 "개발자")가 앱에서 다루는 정보를 설명합니다. 앱은 국민건강보험공단이 공개한 장기요양기관 정보를 지도와 목록으로 보여 줍니다. 앱에는 가입·로그인이 없고, 이름·전화번호·이메일·건강 정보를 묻지 않습니다. 후기를 나누기 위해 앱을 처음 켤 때 무작위 별명의 익명 계정(가계정)이 만들어지며, 실명이나 연락처와 연결되지 않습니다.</p>
 
 <h2>1. 휴대폰 안에만 저장되는 정보</h2>
@@ -29,7 +29,7 @@
 <li>마지막으로 찾은 내 위치(다음에 앱을 열 때 먼저 보여 주기 위해서)</li>
 <li>보상형 광고를 본 뒤 후기를 볼 수 있는 시간</li>
 </ul>
-<p>기관 자료와 3D 지도 자료는 앱과 함께 설치됩니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다. 프로필 화면의 계정 삭제를 누르면 서버의 계정과 후기도 함께 지워집니다.</p>
+<p>기관 자료는 앱과 함께 설치되고, 3D 지도 자료는 지역을 처음 열 때 내려받아 휴대폰에 저장합니다. 앱을 삭제하거나 안드로이드 설정에서 앱 데이터를 지우면 휴대폰 안의 정보도 함께 사라집니다. 프로필 화면의 계정 삭제를 누르면 서버의 계정과 후기도 함께 지워집니다.</p>
 
 <h2>1-1. 서버에 저장되는 정보(후기)</h2>
 <table>
@@ -50,6 +50,7 @@
 <table>
 <tr><th>곳</th><th>하는 일</th></tr>
 <tr><td>Cloudflare(Workers, D1)</td><td>가계정·후기 서버와 저장소(위 1-1). 접속 기록에 IP 주소가 남을 수 있으며, 가입·글쓰기 횟수 제한에 IP 주소를 잠시 씁니다.</td></tr>
+<tr><td>Amazon Web Services(CloudFront), Cloudflare(R2, Workers, Pages)</td><td>3D 지도 자료와 '추천 어플' 그림을 앱에 전달(접속 기록에 IP 주소가 남을 수 있음)</td></tr>
 <tr><td>Google(AdMob)</td><td>광고(아래 4번)</td></tr>
 </table>
 <p>서버는 대한민국 밖에 있을 수 있으며, 오가는 정보는 모두 TLS로 암호화됩니다. 개발자는 정보를 팔거나 제3자에게 넘기지 않습니다. 기관 정보는 국민건강보험공단의 공공데이터이며 이용자 개인정보가 들어 있지 않습니다. 앱은 기관을 추천하거나 순위를 매기지 않습니다.</p>
@@ -67,6 +68,8 @@
 
 <h2>5. 외부 링크</h2>
 <p>기관 전화번호를 누르면 전화 앱이, 홈페이지·길찾기(티맵 등)·쇼핑 탭의 상품을 누르면 휴대폰의 브라우저나 해당 앱이 열립니다. 쇼핑 탭은 쿠팡 파트너스 활동의 일환으로, 구매가 이루어지면 개발자가 일정액의 수수료를 받을 수 있습니다. 앱은 쇼핑 탭에서 누른 상품이나 구매 내역을 받지 않습니다. 열린 사이트·앱에서의 정보 처리는 각 회사의 방침을 따릅니다.</p>
+
+<p>홈의 '추천 어플' 칸에 나오는 그림과 목록은 Cloudflare 서버에서 내려받습니다(접속 기록에 IP 주소가 남을 수 있음). 이 칸에는 같은 개발자의 앱 말고 다른 광고가 나올 수 있으며, 그 광고에는 '광고' 표시가 붙습니다. 누르면 Play 스토어나 그 광고의 페이지가 열립니다.</p>
 
 <h2>6. 권한</h2>
 <table>
@@ -88,7 +91,7 @@
 
 <div class="en" lang="en">
 <h2>Woori Bumo Care Privacy Policy (summary in English)</h2>
-<p>Woori Bumo Care shows public long-term care facility data from the National Health Insurance Service. It is made by Terranode. There is no sign-up or login. To share reviews, an anonymous guest account with a random nickname is created on first launch; it is not linked to your real name or contacts. Reviews (rating, comment, facility) and reports are stored on Cloudflare servers and shown to other users under the nickname; reviews reported three times are hidden automatically. Deleting the account in the app deletes the account and its reviews; inactive accounts are deleted after one year. Favorites, settings and your last location stay on your phone. Location is used only on the phone, with your permission, to show nearby facilities; it is never sent to a server. Google AdMob shows native and rewarded ads and may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention; users in the EEA, UK and Switzerland are asked for consent first. Links in the Shopping tab are part of the Coupang Partners program, and the developer may earn a commission. The app is not directed at children under 14. Contact: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a>. Effective November 18, 2026.</p>
+<p>Woori Bumo Care shows public long-term care facility data from the National Health Insurance Service. It is made by Terranode. There is no sign-up or login. To share reviews, an anonymous guest account with a random nickname is created on first launch; it is not linked to your real name or contacts. Reviews (rating, comment, facility) and reports are stored on Cloudflare servers and shown to other users under the nickname; reviews reported three times are hidden automatically. Deleting the account in the app deletes the account and its reviews; inactive accounts are deleted after one year. Favorites, settings and your last location stay on your phone. Location is used only on the phone, with your permission, to show nearby facilities; it is never sent to a server. 3D map data and app banners are delivered by Cloudflare and Amazon CloudFront (server logs may record IP addresses). Google AdMob shows native and rewarded ads and may collect IP address, app interactions, diagnostics and device identifiers (such as the advertising ID) for advertising, analytics and fraud prevention; users in the EEA, UK and Switzerland are asked for consent first. Links in the Shopping tab are part of the Coupang Partners program, and the developer may earn a commission. The app is not directed at children under 14. Contact: <a href="mailto:terranode8705@gmail.com">terranode8705@gmail.com</a>. Effective November 25, 2026.</p>
 </div>
 </body>
 </html>
